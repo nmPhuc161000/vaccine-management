@@ -27,4 +27,5 @@ setupSwagger(app);
 // Khởi chạy server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+  console.log(`Swagger API Docs available at: http://localhost:${PORT}/api-docs/#/`);
 });
