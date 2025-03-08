@@ -9,7 +9,11 @@ const swaggerOptions = {
             version: '1.0.0',
             description: 'API for managing and tracking child vaccination schedules',
         },
-        servers: [{ url: 'http://localhost:5000' }],
+        servers: [{
+            url: process.env.NODE_ENV === 'production'
+                ? 'https://vaccine-management.vercel.app/' // Thay bằng domain thực của bạn
+                : 'http://localhost:5000/api',
+        },],
         components: {
             schemas: {
                 Child: {
