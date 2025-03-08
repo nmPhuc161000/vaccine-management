@@ -12,7 +12,7 @@ const childController = require('../controller/childController');
 
 /**
  * @swagger
- * /api/children:
+ * /api/children/add-children:
  *   post:
  *     summary: Tạo hồ sơ trẻ em
  *     tags: [Children]
@@ -52,11 +52,11 @@ const childController = require('../controller/childController');
  *       400:
  *         description: Lỗi tạo hồ sơ
  */
-router.post('/', auth, childController.createChild);
+router.post('/add-children', auth, childController.createChild);
 
 /**
  * @swagger
- * /api/children:
+ * /api/children/get-children:
  *   get:
  *     summary: Lấy danh sách trẻ em
  *     tags: [Children]
@@ -74,6 +74,6 @@ router.post('/', auth, childController.createChild);
  *       401:
  *         description: Không có quyền truy cập
  */
-router.get('/', auth, childController.getChildren);
+router.get('/get-children', auth, childController.getChildren);
 
 module.exports = router;

@@ -11,8 +11,8 @@ const swaggerOptions = {
         },
         servers: [{
             url: process.env.NODE_ENV === 'production'
-                ? 'https://vaccine-management.vercel.app/' // Thay bằng domain thực của bạn
-                : 'http://localhost:5000/api',
+                ? 'https://vaccine-management.vercel.app' // Thay bằng domain thực của bạn
+                : 'http://localhost:5000',
         },],
         components: {
             schemas: {

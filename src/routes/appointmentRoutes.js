@@ -12,7 +12,7 @@ const appointmentController = require('../controller/appointmentController');
 
 /**
  * @swagger
- * /api/appointments:
+ * /api/appointments/booking:
  *   post:
  *     summary: Đặt lịch hẹn tiêm chủng
  *     tags: [Appointments]
@@ -48,11 +48,11 @@ const appointmentController = require('../controller/appointmentController');
  *       400:
  *         description: Lỗi đặt lịch
  */
-router.post('/', auth, appointmentController.createAppointment);
+router.post('/booking', auth, appointmentController.createAppointment);
 
 /**
  * @swagger
- * /api/appointments:
+ * /api/appointments/get-booking:
  *   get:
  *     summary: Lấy danh sách lịch hẹn
  *     tags: [Appointments]
@@ -70,6 +70,6 @@ router.post('/', auth, appointmentController.createAppointment);
  *       401:
  *         description: Không có quyền truy cập
  */
-router.get('/', auth, appointmentController.getAppointments);
+router.get('/get-booking', auth, appointmentController.getAppointments);
 
 module.exports = router;
